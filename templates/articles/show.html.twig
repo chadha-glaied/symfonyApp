@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+{% block title %}{{ article.title }}{% endblock %}
+{% block body %}
+    <h1>{{ article.title }}</h1>
+    <p>{{ article.content}}</p>
+    <img src="{{ article.image }}" alt="une image">
+    <div class="metadata">ecrit le {{ article.createdAt | date('d/m/Y') }} à {{ article.createdAt | date('H:i')}}
+    </div>
+    <hr>
+    <a href="/">Retour</a>
+{% endblock %}
